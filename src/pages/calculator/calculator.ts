@@ -23,9 +23,9 @@ export class CalculatorPage {
   }
 
   calculateBMI() {
-    of (this.weight > 0 && this.height > 0) {
+    if (this.weight > 0 && this.height > 0) {
       let finalBmi = this.weight / (this.height / 100 * this.height /100);
-      this.bmiValue = parseFloat(finalBmi.tofixed(2));
+      this.bmiValue = parseFloat(finalBmi.toFixed(2));
       this.setBMIMessage();
     }
   }
@@ -47,12 +47,4 @@ export class CalculatorPage {
       this.bmiMessage = "Obese"
     }
   }
-
-
-
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CalculatorPage');
-  }
-
 }
